@@ -17,11 +17,13 @@ form.addEventListener('submit', (e) => {
 
 try {
     db.collection('games').onSnapshot(function (data) {
-    let list = document.querySelector('.list');
-    list.innerHTML = '';
-    data.docs.map(function (val) {
-        list.innerHTML += `${val.data().game}<br/>`;
-    })
+        let list = document.querySelector('.list');
+        list.innerHTML = '';
+        data.docs.map(function (val) {
+            list.innerHTML += `<tr>
+                <td>${val.data().game}</td>
+            </tr>`;
+        })
     })
 } catch (error) {
     console.log(error);
