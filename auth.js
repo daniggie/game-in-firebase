@@ -12,8 +12,6 @@ function signIn() {
 
 auth.onAuthStateChanged((val) => {
     if (val) {
-        console.log(val);
-        console.log(val.displayName);
         let list = document.querySelector('#btnLogin');
         list.innerHTML = '';
         list.innerHTML += `${val.displayName}`;

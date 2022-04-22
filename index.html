@@ -13,7 +13,7 @@
 
 <body style="background-color: rgb(33,37,41);">
 
-    <header class="p-3 text-white border border-white">
+    <header class="p-3 text-white">
         <div class="container d-flex justify-content-end">
             <button onclick="signIn()" id="btnLogin" type="button" class="btn btn-dark border border-white">Login para melhor experiencia</button>
         </div>
@@ -24,11 +24,11 @@
         <div class="container-xl p-4 d-flex justify-content-between">
             <div class="container m-1 p-2 w-50 border border-white text-white">
                 <label for="formGroupExampleInput" class="form-label">New Game</label>
-                <div id="form" class="input-group mb-3">
-                    <input type="text" class="form-control bg-dark text-white" placeholder="My new game..."
+                <form class="d-flex">
+                    <input type="text"  name="game" class="me-1 form-control bg-dark text-white" placeholder="My new game..."
                         aria-label="Recipient's username" aria-describedby="button-addon2">
                     <input class="btn btn-dark border border-white" type="submit"></input>
-                </div>
+                </form>
             </div>
 
             <div class="container m-1 p-2 w-50 border border-white text-white">
